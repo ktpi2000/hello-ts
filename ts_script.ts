@@ -1,9 +1,9 @@
-let lang = 'Javascript';
-let msg1 = `Hello! This is ${lang}!`;
-lang = 'Typescript';
-let msg2 = `Hello! This is ${lang}!`;
+function calc(n: number, f: Function) {
+    return f(n);
+}
 
-let msg: string = `「${msg1}」<br>「${msg2}」`;
+//アロー関数
+let msg = calc(123, n => n + n);
 
 function load() {
     document.querySelector('#msg').innerHTML = msg;
