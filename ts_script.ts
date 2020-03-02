@@ -1,10 +1,12 @@
-function calc(n: number, f: Function) {
-    return f(n);
+let ob = {
+    name: 'Taro',
+    mail: 'taro@yamada',
+    age: 35,
+    toString: function () {
+        return this.name + ',' + this.mail + ',' + this.age;
+    }
 }
 
-//アロー関数
-let msg = calc(123, n => n + n);
-
 function load() {
-    document.querySelector('#msg').innerHTML = msg;
+    document.querySelector('#msg').innerHTML = ob.toString();
 }
