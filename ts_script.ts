@@ -1,7 +1,15 @@
 class Person {
     name: string;
     mail: string;
-    age: number;
+    private _age: number;
+
+    get age() {
+        return this._age;
+    }
+
+    set age(n: number) {
+        this._age = n < 0 ? 0 : n;
+    }
 
     constructor(nm, ml, ag) {
         this.name = nm;
@@ -14,7 +22,7 @@ class Person {
     }
 }
 
-var ob = new Person('taro', 'taro@gmail.com', 20);
+var ob = new Person('taro', 'taro@gmail.com', 80);
 
 function load() {
     document.querySelector('#msg').innerHTML = ob.toString();
