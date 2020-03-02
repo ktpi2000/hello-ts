@@ -1,18 +1,21 @@
-function Person(nm, ml, ag) {
-    this.name = nm;
-    this.mail = ml;
-    this.age = ag;
-    this.toString = function () {
+class Person {
+    name: string;
+    mail: string;
+    age: number;
+
+    constructor(nm, ml, ag) {
+        this.name = nm;
+        this.mail = ml;
+        this.age = ag;
+    }
+
+    toString() {
         return this.name + ',' + this.mail + ',' + this.age;
     }
 }
 
-var ob1 = new Person('taro', 'taro@yamada', 40);
-
-var ob2 = new Person('suzuki', 'suzuki@honda', 30);
-
-let msg = `${ob1} <br> ${ob2}`;
+var ob = new Person('taro', 'taro@gmail.com', 20);
 
 function load() {
-    document.querySelector('#msg').innerHTML = msg;
+    document.querySelector('#msg').innerHTML = ob.toString();
 }
