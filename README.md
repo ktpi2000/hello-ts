@@ -7,4 +7,4 @@ tsをjsにコンパイル
 `tsc xxx.ts`
 
 ターゲットを指定する場合
-`tsc --target es6 xxx.tsv`
+`tsc --target es6 xxx.ts`
