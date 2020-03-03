@@ -6,5 +6,5 @@
 tsをjsにコンパイル  
 `tsc xxx.ts`
 
-ターゲットを指定する場合
+ターゲットを指定する場合  
 `tsc --target es6 xxx.ts`
