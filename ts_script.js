@@ -10,31 +10,16 @@ class Person {
     set age(n) {
         this._age = n < 0 ? 0 : n;
     }
-    toString() {
+    print() {
         return this.name + ',' + this.mail + ',' + this.age;
     }
 }
-class Teen extends Person {
-    constructor(nm, ml, ag, sc) {
-        super(nm, ml, ag); //Personクラスのコンストラクタを呼び出し
-        this.school = sc;
-    }
-    get age() {
-        return this.__age;
-    }
-    set age(n) {
-        this.__age = n < 0 ? 0 : n >= 20 ? 19 : n;
-    }
-    toString() {
-        return this.name + ',' + this.mail + ',' + this.age + ' (' + this.school + ')';
-    }
-}
 let taro = new Person('taro', 'taro@gmail.com', 80);
-let jiro = new Teen('jiro', 'jiro@gmail.com', 17, 'oyama kosen');
+let jiro = new Person('jiro', 'jiro@gmail.com', 17);
 function load() {
     let msg = `<ul>
-    <li>${taro.toString()}</li>
-    <li>${jiro.toString()}</li>
+    <li>${taro.print()}</li>
+    <li>${jiro.print()}</li>
     </ul>`;
     document.querySelector('#msg').innerHTML = msg;
 }
